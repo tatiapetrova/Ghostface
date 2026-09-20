@@ -45,7 +45,7 @@ export default {
                 { SendMessages: true },
                 {
                     type: 0,
-                    reason: `Channel unlocked by ${interaction.user.tag}`,
+                    reason: `${interaction.user.tag} unlocked the channel. Guess the silence is over.`,
 },
             );
 
@@ -67,7 +67,7 @@ export default {
                 embeds: [
                     successEmbed(
                         `🔓 **Channel Unlocked**`,
-                        `${channel} is now unlocked. You may speak now.`,
+                        `${channel} is unlocked. Go ahead... you can talk now.`,
                     ),
                 ],
             });
