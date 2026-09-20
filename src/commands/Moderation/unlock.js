@@ -73,7 +73,7 @@ export default {
             });
         } catch (error) {
             logger.error('Unlock command error:', error);
-            await replyUserError(interaction, { type: ErrorTypes.PERMISSION, message: 'An unexpected error occurred while trying to unlock the channel. Check my permissions (I need \'Manage Channels\').' });
+            await replyUserError(interaction, { type: ErrorTypes.PERMISSION, message: 'I tried to unlock channel. Looks like someone forgot to give me "Manage Channels."' });
         }
     }
 };
