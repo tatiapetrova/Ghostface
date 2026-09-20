@@ -1,4 +1,4 @@
-mport {
+import {
   SlashCommandBuilder,
   PermissionFlagsBits,
 } from "discord.js";
