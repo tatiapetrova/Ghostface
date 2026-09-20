@@ -32,7 +32,7 @@ export default {
     try {
       const currentPermissions = channel.permissionsFor(everyoneRole);
       if (currentPermissions.has(PermissionFlagsBits.SendMessages) === false) {
-        return await replyUserError(interaction, { type: ErrorTypes.UNKNOWN, message: `${channel} is already locked.` });
+        return await replyUserError(interaction, { type: ErrorTypes.UNKNOWN, message: `${channel} is already locked. Did you forget?` });
       }
 
       await channel.permissionOverwrites.edit(
