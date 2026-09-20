@@ -60,7 +60,7 @@ export default {
         embeds: [
           successEmbed(
             `🔒 **Channel Locked**`,
-            `${channel} is now locked down. No one can speak here now.`,
+            `${channel} is locked down. Not a word from anyone.`,
           ),
         ],
       });
