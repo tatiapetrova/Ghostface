@@ -25,7 +25,7 @@ export default {
 
     if (!jailRole) {
       return interaction.reply({
-        content: "The `Jailed` role doesn't exist.",
+        content: "The `Jailed` role doesn't exist. Did you really think I'd let that slide?",
         ephemeral: true,
       });
     }
