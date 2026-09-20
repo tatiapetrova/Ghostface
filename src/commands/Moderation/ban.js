@@ -22,13 +22,13 @@ export default {
 
     async execute(interaction, config, client) {
         const user = interaction.options.getUser("target");
-        const reason = interaction.options.getString("reason") || "No reason provided";
+        const reason = interaction.options.getString("reason") || "No explanation. Just take the hint.";
 
         if (!user) {
             throw new TitanBotError(
                 'Missing target user',
                 ErrorTypes.USER_INPUT,
-                'You must specify a user to ban.',
+                'I can't make the call if you don't give me a name.',
                 { subtype: 'invalid_user' },
             );
         }
@@ -58,7 +58,7 @@ export default {
         await InteractionHelper.universalReply(interaction, {
             embeds: [
                 successEmbed(
-                    `🚫 **Banned** ${user.tag}`,
+                    `🚫 ${user.tag} answered my call. That was their last mistake.`,
                     `**Reason:** ${reason}\n**Case ID:** #${result.caseId}`,
                 ),
             ],
