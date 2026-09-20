@@ -37,7 +37,7 @@ export default {
                 currentPermissions.has(PermissionFlagsBits.SendMessages) ===
                     null
             ) {
-                return await replyUserError(interaction, { type: ErrorTypes.UNKNOWN, message: `${channel} is not explicitly locked (everyone can already send messages).` });
+                return await replyUserError(interaction, { type: ErrorTypes.UNKNOWN, message: `${channel} isn't locked. Everyone can already talk. Did you even check?` });
             }
 
             await channel.permissionOverwrites.edit(
