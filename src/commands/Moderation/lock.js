@@ -38,7 +38,7 @@ export default {
       await channel.permissionOverwrites.edit(
         everyoneRole,
         { SendMessages: false },
-{ type: 0, reason: `Channel locked by ${interaction.user.tag}` },
+{ type: 0, reason: `Channel locked by ${interaction.user.tag} Guess that's one less place to hide.` },
       );
 
       await logEvent({
